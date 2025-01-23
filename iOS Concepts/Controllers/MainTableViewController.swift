@@ -6,40 +6,13 @@
 //
 
 import UIKit
-
-// MARK: - Model
-struct Item {
-    let title: String
-    let subtitle: String
-}
-
-// MARK: - ViewModel
-class ItemViewModel {
-    private var items: [Item] = []
-
-    var numberOfItems: Int {
-        return items.count
-    }
-
-    func item(at index: Int) -> Item {
-        return items[index]
-    }
-
-    func loadItems(completion: @escaping () -> Void) {
-        // Simulate data fetching (e.g., from an API or database)
-        DispatchQueue.global().async {
-            self.items = [
-                Item(title: "Item 1", subtitle: "Subtitle 1"),
-                Item(title: "Item 2", subtitle: "Subtitle 2"),
-                Item(title: "Item 3", subtitle: "Subtitle 3")
-            ]
-            DispatchQueue.main.async {
-                completion()
-            }
-        }
-    }
-}
-
+/*
+     Why This Structure Works
+     Scalability: Each feature is modular and self-contained, making it easier to expand or refactor.
+     Readability: Separating layers (Model, ViewModel, View, Controller) keeps responsibilities clear.
+     Reusability: Views and ViewModels can often be reused in other parts of the app.
+     Testability: The ViewModel is independent of the UI, making it easier to unit test.
+ */
 // MARK: - ViewController
 class MainTableViewController: UITableViewController {
 
@@ -68,8 +41,8 @@ class MainTableViewController: UITableViewController {
         let item = viewModel.item(at: indexPath.row)
         
         // Configure cell
-        cell.textLabel?.text = item.title
-        cell.detailTextLabel?.text = item.subtitle
+        cell.textLabel?.text = item.conceptTitle
+        cell.detailTextLabel?.text = item.conceptDescription
         cell.accessoryType = .disclosureIndicator
 
         return cell
@@ -81,7 +54,7 @@ class MainTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
         let selectedItem = viewModel.item(at: indexPath.row)
-        print("Selected item: \(selectedItem.title)")
+        print("Selected item: \(selectedItem.conceptTitle)")
 
         // Perform actions based on the selected item, such as navigation
     }
