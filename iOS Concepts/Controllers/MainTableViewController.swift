@@ -56,6 +56,6 @@ class MainTableViewController: UITableViewController {
         let selectedItem = viewModel.item(at: indexPath.row)
         print("Selected item: \(selectedItem.conceptTitle)")
 
-        // Perform actions based on the selected item, such as navigation
+        performSegue(withIdentifier: "\(indexPath.row)", sender: nil)
     }
 }
