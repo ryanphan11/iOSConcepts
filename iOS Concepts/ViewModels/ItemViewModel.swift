@@ -44,8 +44,8 @@ class ItemViewModel {
         // Simulate data fetching (e.g., from an API or database)
         DispatchQueue.global().async {
             self.items = [
-                Item(conceptTitle: "Concept 1", conceptDescription: "Concept 2 Description"),
-                Item(conceptTitle: "Concept 2", conceptDescription: "Concept 2 Description"),
+                Item(conceptTitle: "ARC", conceptDescription: ""),
+                Item(conceptTitle: "SOLID", conceptDescription: ""),
                 Item(conceptTitle: "Concept 3", conceptDescription: "Concept 3 Description")
             ]
             DispatchQueue.main.async {

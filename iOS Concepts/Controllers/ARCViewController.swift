@@ -8,27 +8,30 @@
 import UIKit
 
 class ARCViewController: UIViewController {
+    var debugMessage: String = ""
     @IBOutlet weak var debugLabel: UILabel!
-    var debugString = ""
+    var currentARCViewModel: ARCViewModel
+    
+    required init?(coder: NSCoder) {
+        currentARCViewModel = ARCViewModel()
+        super.init(coder: coder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        displayDebug(note: "ViewDidLoad\n")
+        getMessagesForUI(with: currentARCViewModel.car)
+        getMessagesForUI(with: currentARCViewModel.person)
+        getMessagesForUI(with: currentARCViewModel)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        displayDebug(note: "ViewDidAppear\n")
-        print("ViewDidAppear")
     }
     
-    func displayDebug(note: String) {
-        debugString.append(note)
-        debugLabel.text = debugString
+    @objc func displayDebug(message: String) {
+        debugMessage += message
+        debugLabel.text = debugMessage
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -39,4 +42,12 @@ class ARCViewController: UIViewController {
     }
     */
 
+}
+
+extension ARCViewController {
+    func getMessagesForUI(with object: DebugMesssagesPrintable) {
+        for message in object.debugMessages {
+            displayDebug(message: message)
+        }
+    }
 }

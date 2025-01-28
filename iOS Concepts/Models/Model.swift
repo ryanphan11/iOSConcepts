@@ -34,3 +34,7 @@ protocol ConceptModel {
     var conceptTitle: String { get }
     var conceptDescription: String { get }
 }
+
+protocol DebugMesssagesPrintable {
+    var debugMessages: [String] { get set }
+}
