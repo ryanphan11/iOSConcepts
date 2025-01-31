@@ -34,11 +34,28 @@
                     <navigationItem key="navigationItem" id="fnm-Cb-dtq"/>
                     <connections>
                         <segue destination="CxB-hj-FK0" kind="show" identifier="0" id="o93-ZV-6VQ"/>
+                        <segue destination="o4M-gE-zdt" kind="show" identifier="1" id="5xN-vm-8vf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1X-7b-gQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1495.4198473282443" y="-11.267605633802818"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="w7K-Ml-bsC">
+            <objects>
+                <viewController id="o4M-gE-zdt" customClass="BLEVTableViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ktl-qS-nkd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0C7-gr-vPV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="739-6K-Rlv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zk-hd-q5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="183"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="18X-Qk-rBy">
@@ -73,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7D-bC-nzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583.96946564885491" y="-692.25352112676057"/>
+            <point key="canvasLocation" x="2350" y="-542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eB8-qn-gby">
