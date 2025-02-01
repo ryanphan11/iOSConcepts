@@ -35,16 +35,17 @@
                     <connections>
                         <segue destination="CxB-hj-FK0" kind="show" identifier="0" id="o93-ZV-6VQ"/>
                         <segue destination="o4M-gE-zdt" kind="show" identifier="1" id="5xN-vm-8vf"/>
+                        <segue destination="0CW-jr-e9g" kind="show" identifier="2" id="PSP-DY-UWN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1X-7b-gQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1495.4198473282443" y="-11.267605633802818"/>
         </scene>
-        <!--Table View Controller-->
+        <!--BLE-->
         <scene sceneID="w7K-Ml-bsC">
             <objects>
-                <viewController id="o4M-gE-zdt" customClass="BLEVTableViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BLE" id="o4M-gE-zdt" customClass="BLEVTableViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ktl-qS-nkd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +58,64 @@
             </objects>
             <point key="canvasLocation" x="2370" y="183"/>
         </scene>
-        <!--View Controller-->
+        <!--Error Handling-->
+        <scene sceneID="W8r-eg-3pO">
+            <objects>
+                <viewController storyboardIdentifier="Error Handling" title="Error Handling" id="0CW-jr-e9g" customClass="ErrorHandlingViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9lV-lT-xQK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="hFd-WC-m7H">
+                                <rect key="frame" x="20" y="186" width="353" height="232"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyI-Dq-gT3">
+                                        <rect key="frame" x="91.333333333333329" y="0.0" width="170.66666666666669" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="koM-dO-fBP">
+                                        <rect key="frame" x="160.66666666666666" y="43.33333333333335" width="32" height="65.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHW-o8-C1a">
+                                        <rect key="frame" x="126.66666666666666" y="132" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="0S5-xZ-DAL"/>
+                                            <constraint firstAttribute="height" constant="100" id="n5l-ux-PM2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XQh-Zt-7cW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XQh-Zt-7cW" firstAttribute="bottom" secondItem="hFd-WC-m7H" secondAttribute="bottom" constant="400" id="Tkg-sK-5ce"/>
+                            <constraint firstItem="hFd-WC-m7H" firstAttribute="top" secondItem="XQh-Zt-7cW" secondAttribute="top" constant="83" id="UgM-ps-DX1"/>
+                            <constraint firstItem="hFd-WC-m7H" firstAttribute="leading" secondItem="XQh-Zt-7cW" secondAttribute="leading" constant="20" id="rzy-LX-8Gd"/>
+                            <constraint firstItem="XQh-Zt-7cW" firstAttribute="trailing" secondItem="hFd-WC-m7H" secondAttribute="trailing" constant="20" id="znq-KE-HfY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0mv-0a-OBS"/>
+                    <connections>
+                        <outlet property="consoleOutputLabel" destination="lHW-o8-C1a" id="eES-Mg-dPn"/>
+                        <outlet property="numberInputTextField" destination="koM-dO-fBP" id="eaD-cb-Dh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxY-MF-jze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="744"/>
+        </scene>
+        <!--ARC-->
         <scene sceneID="18X-Qk-rBy">
             <objects>
-                <viewController id="CxB-hj-FK0" customClass="ARCViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ARC" id="CxB-hj-FK0" customClass="ARCViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdP-VY-tU2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
