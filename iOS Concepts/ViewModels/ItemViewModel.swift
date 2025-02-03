@@ -46,7 +46,8 @@ class ItemViewModel {
             self.items = [
                 Item(conceptTitle: "ARC", conceptDescription: ""),
                 Item(conceptTitle: "BLE", conceptDescription: ""),
-                Item(conceptTitle: "Error Handling", conceptDescription: "")
+                Item(conceptTitle: "Error Handling", conceptDescription: ""),
+                Item(conceptTitle: "Generic", conceptDescription: "")
             ]
             DispatchQueue.main.async {
                 completion()
