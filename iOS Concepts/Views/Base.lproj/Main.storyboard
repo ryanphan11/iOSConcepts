@@ -38,11 +38,13 @@
                         <segue destination="o4M-gE-zdt" kind="show" identifier="1" id="5xN-vm-8vf"/>
                         <segue destination="0CW-jr-e9g" kind="show" identifier="2" id="PSP-DY-UWN"/>
                         <segue destination="27Q-Pi-fR1" kind="show" identifier="3" id="PfX-Qm-A4Q"/>
+                        <segue destination="GSk-Gw-eko" kind="show" identifier="4" id="yAI-gd-gHp"/>
+                        <segue destination="vJO-Jr-Pcy" kind="show" identifier="5" id="rmx-60-sDU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1X-7b-gQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495.4198473282443" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="1694" y="-21"/>
         </scene>
         <!--BLE-->
         <scene sceneID="w7K-Ml-bsC">
@@ -273,6 +275,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPy-EQ-RDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="568.70229007633588" y="-11.267605633802818"/>
+        </scene>
+        <!--Codable View Controller-->
+        <scene sceneID="cXF-5X-ga1">
+            <objects>
+                <viewController id="GSk-Gw-eko" customClass="CodableViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjO-VC-L8f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-LM-X7r">
+                                <rect key="frame" x="50" y="203" width="293" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAx-TR-QEq">
+                                        <rect key="frame" x="105" y="0.0" width="83.333333333333314" height="240"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Decode"/>
+                                        <connections>
+                                            <action selector="decodeButtonPressed:" destination="GSk-Gw-eko" eventType="touchUpInside" id="N5r-jD-b5U"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-Ac-SpW">
+                                        <rect key="frame" x="46.666666666666686" y="315" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="NIn-l6-pkN"/>
+                                            <constraint firstAttribute="height" constant="200" id="iMl-cn-8Xd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fCK-cf-Sbc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mma-LM-X7r" firstAttribute="leading" secondItem="fCK-cf-Sbc" secondAttribute="leading" constant="50" id="DEP-O7-eaO"/>
+                            <constraint firstItem="fCK-cf-Sbc" firstAttribute="trailing" secondItem="Mma-LM-X7r" secondAttribute="trailing" constant="50" id="K4P-Ga-1cX"/>
+                            <constraint firstItem="fCK-cf-Sbc" firstAttribute="bottom" secondItem="Mma-LM-X7r" secondAttribute="bottom" constant="100" id="jVi-tS-sJH"/>
+                            <constraint firstItem="Mma-LM-X7r" firstAttribute="top" secondItem="fCK-cf-Sbc" secondAttribute="top" constant="100" id="noF-gH-bUb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hVQ-OZ-3hE"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="Wqb-Ac-SpW" id="Qke-Cn-hkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ne-KZ-FUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="1577"/>
+        </scene>
+        <!--Semaphore-->
+        <scene sceneID="1zQ-7b-FZn">
+            <objects>
+                <viewController title="Semaphore" id="vJO-Jr-Pcy" customClass="SemaphoreViewController" customModule="iOS_Concepts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8h-ds-leR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semaphore" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzM-y6-Sbf">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Sev-cZ-vCE"/>
+                                    <constraint firstAttribute="height" constant="200" id="iSW-Id-qz5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cwP-wO-Kf5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MzM-y6-Sbf" firstAttribute="centerY" secondItem="d8h-ds-leR" secondAttribute="centerY" id="OcE-YT-Ndi"/>
+                            <constraint firstItem="MzM-y6-Sbf" firstAttribute="centerX" secondItem="d8h-ds-leR" secondAttribute="centerX" id="lZ2-by-AfZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qng-Ay-KZn"/>
+                    <connections>
+                        <outlet property="ResultLabel" destination="MzM-y6-Sbf" id="GHN-f8-hNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjz-IK-vYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="1576"/>
         </scene>
     </scenes>
     <resources>
