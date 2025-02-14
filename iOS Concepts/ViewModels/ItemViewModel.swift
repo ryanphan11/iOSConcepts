@@ -49,7 +49,8 @@ class ItemViewModel {
                 Item(conceptTitle: "Error Handling", conceptDescription: ""),
                 Item(conceptTitle: "Generic", conceptDescription: ""),
                 Item(conceptTitle: "Codable", conceptDescription: ""),
-                Item(conceptTitle: "Semaphore", conceptDescription: "")
+                Item(conceptTitle: "Semaphore", conceptDescription: ""),
+                Item(conceptTitle: "DI", conceptDescription: "")
             ]
             DispatchQueue.main.async {
                 completion()

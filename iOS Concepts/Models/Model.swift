@@ -38,3 +38,7 @@ protocol ConceptModel {
 protocol DebugMesssagesPrintable {
     var debugMessages: [String] { get set }
 }
+
+protocol NetworkService {
+    func getData() -> String
+}
